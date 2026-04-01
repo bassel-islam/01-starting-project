@@ -15,7 +15,7 @@ export class AppComponent {
   users = DUMMY_USERS;
   userId = 'u1';
   get selectedUser(){
-    return this.users.find((user) => user.id === this.userId)!;
+    return this.users.find((user) => user.id === this.userId);
   }
   onSelectUser(userId:string){
     this.userId = userId;
