@@ -8,14 +8,11 @@ import {
   signal,
 } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
+import { User } from './user.model';
 //import { DUMMY_USERS } from '../dummy-users';
 
 //const randomUserIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-interface User {
-  id: string;
-  name: string;
-  avatar: string;
-}
+
 @Component({
   selector: 'app-user',
   standalone: true,
