@@ -8,17 +8,17 @@ import { NgFor } from "@angular/common";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, TasksComponent, NgFor],
+  imports: [HeaderComponent, UserComponent, TasksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  userId?:string ;
+  selectedUserId?:string ;
   get selectedUser(){
-    return this.users.find((user) => user.id === this.userId);
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
   onSelectUser(userId:string){
-    this.userId = userId;
+    this.selectedUserId = userId;
   }
 }

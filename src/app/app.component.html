@@ -4,7 +4,7 @@
     @for (u of users; track u.id) {
       <!-- <li *ngFor="let u of users"> -->
       <li>
-        <app-user [user]="u" (select)="onSelectUser($event)" />
+        <app-user [selected]="u.id===selectedUserId" [user]="u" (select)="onSelectUser($event)" />
       </li>
     }
   </ul>
